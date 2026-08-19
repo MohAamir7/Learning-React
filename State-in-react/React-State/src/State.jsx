@@ -20,9 +20,22 @@ function Gallery(){
     1. A state variable to retain the data bwtween renders
     2. A state setter function to update the variable and trigger react to render the component.
     */
+//    we can use multiple state in one component
    const [Idx,setIdx] = useState(0);
+   const [showMore,setshowMore] = useState(false);
+   function handleMoreClick(){
+    setshowMore(!showMore);
+
+   }
     function handleClick(){
-        setIdx(Idx+1);
+        console.log(Idx);
+        console.log(sculptureList.length);
+        if(Idx === sculptureList.length-1){
+            setIdx(0);
+        }else{
+            setIdx(Idx+1);
+        }
+        
     }
     let sculpture = sculptureList[Idx];
     return(
@@ -38,6 +51,12 @@ function Gallery(){
         <h3>
             ({Idx+1} to {sculptureList.length});
         </h3>
+        <img src={sculpture.url} alt="" />
+        <button onClick={handleMoreClick}>
+            {showMore ? 'hide':'show'} details
+            {showMore && <p>{sculpture.description}</p>}
+
+        </button>
     </>
     )
 }
