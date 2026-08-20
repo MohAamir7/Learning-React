@@ -1,15 +1,17 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 import Gallery from './State'
+import Counter from './State-over-Time'
+import Form from './Message-Timer'
 
 function App() {
 
   return (
     <>
-    <Gallery></Gallery>
+    {/* <Gallery></Gallery> */}
+    <Counter></Counter>
+    <Form></Form>
+
       
     </>
   )
