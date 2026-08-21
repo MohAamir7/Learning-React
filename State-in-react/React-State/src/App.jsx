@@ -6,6 +6,7 @@ import Form from './Message-Timer'
 import MovingDot from './Object-in-State'
 import Form2 from './Spread-Copy'
 import NestedForm from './NestedObject-in-State'
+import List from './Array-in-State'
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
     {/* <MovingDot></MovingDot> */}
     <Form2></Form2>
     <NestedForm></NestedForm>
-
+    <List></List>
       
     </>
   )
